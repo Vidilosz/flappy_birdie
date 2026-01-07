@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:flappy_birdie"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+	<Canvas>
+		<Ellipse x:Name="madar" Height="50" Canvas.Left="52" Canvas.Top="263" Width="50" Opacity="0.99" Fill="#FFEDC229"/>
+		<Button Content="Start" Canvas.Left="317" Canvas.Top="65" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35"/>
+		<StackPanel Height="201" Width="318" Canvas.Left="240" Canvas.Top="145" HorizontalAlignment="Left" VerticalAlignment="Center">
+			<RadioButton Height="67" FontSize="30">Normal</RadioButton>
+			<RadioButton Height="67" FontSize="30">Rain</RadioButton>
+			<RadioButton Height="67" FontSize="30" Background="White">The FOG Is COMING</RadioButton>
+		</StackPanel>
+
+	</Canvas>
 </Window>
