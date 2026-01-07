@@ -8,11 +8,15 @@
         Title="MainWindow" Height="450" Width="800">
 
 	<Canvas>
-		<Ellipse x:Name="madar" Height="50" Canvas.Left="55" Canvas.Top="199" Width="50" Opacity="0.99" Fill="#FFEDC229" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<Button x:Name="Start" Content="Start" Canvas.Left="317" Canvas.Top="65" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35" Background="#FFEFEFEF" Click="Start_Click"/>
-		<Button x:Name="Normal" Content="Normal" Canvas.Left="317" Canvas.Top="130" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35" Background="#FFEFEFEF" Click="Normal_Click"/>
-		<Button x:Name="Rainy_day" Content="Rainy day" Canvas.Left="317" Canvas.Top="230" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35" Background="#FFEFEFEF" Click="Rainy_day_Click"/>
-		<Button x:Name="TFI" Content="ThE foG IS COmIng" Canvas.Left="317" Canvas.Top="330" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="19" Background="#FFC1BDBD" Click="TFI_Click"/>
+		<Canvas.Background>
+			<ImageBrush ImageSource="/Images/pc2.jpg"/>
+		</Canvas.Background>
+		<Image Source="/Images/floppy2.jpg" x:Name="madar" Canvas.Left="170" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="82"/>
+
+		<Button x:Name="Start" Content="Start" Canvas.Left="317" Canvas.Top="44" Height="65" Width="164" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Start_Click"/>
+		<Button x:Name="Normal" Content="Normal" Canvas.Left="323" Canvas.Top="22" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Normal_Click"/>
+		<Button x:Name="Rainy_day" Content="Rainy day" Canvas.Left="323" Canvas.Top="98" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Rainy_day_Click"/>
+		<Button x:Name="TFI" Content="ThE foG IS COmIng" Canvas.Left="322" Canvas.Top="168" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="19" Background="{x:Null}" Click="TFI_Click"/>
 
 	</Canvas>
 </Window>

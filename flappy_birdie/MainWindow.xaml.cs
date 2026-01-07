@@ -5,9 +5,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace flappy_birdie
 {
@@ -16,7 +18,7 @@ namespace flappy_birdie
     /// </summary>
     public partial class MainWindow : Window
     {
-
+		
 
         public MainWindow()
         {
@@ -61,6 +63,17 @@ namespace flappy_birdie
 
 		public void StartGame()
 		{
+			var madar_animation = new DoubleAnimation
+			{
+				To = 434,
+				Duration = TimeSpan.FromSeconds(1),
+				EasingFunction = new QuadraticEase
+				{
+					EasingMode = EasingMode.EaseIn
+				}
+			};
+
+			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
 
 		}
 	}
