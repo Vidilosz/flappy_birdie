@@ -79,6 +79,8 @@ namespace flappy_birdie
 
 		private void jump_2_Click(object sender, RoutedEventArgs e)
 		{
+			double currentTop = Canvas.GetTop(madar);
+
 			var madar_animation = new DoubleAnimation
 			{
 				To = 334,
@@ -90,8 +92,6 @@ namespace flappy_birdie
 			};
 
 			madar.BeginAnimation(Canvas.TopProperty, null);
-
-			double currentTop = Canvas.GetTop(madar);
 
 			Canvas.SetTop(madar, currentTop - 15);
 
@@ -100,6 +100,8 @@ namespace flappy_birdie
 
 		private void jump_1_Click_1(object sender, RoutedEventArgs e)
 		{
+			double currentTop = Canvas.GetTop(madar);
+
 			var madar_animation = new DoubleAnimation
 			{
 				To = 334,
@@ -111,8 +113,6 @@ namespace flappy_birdie
 			};
 
 			madar.BeginAnimation(Canvas.TopProperty, null);
-
-			double currentTop = Canvas.GetTop(madar);
 
 			Canvas.SetTop(madar, currentTop - 15);
 
