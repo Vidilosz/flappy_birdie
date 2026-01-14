@@ -64,10 +64,11 @@ namespace flappy_birdie
 
 		public void StartGame()
 		{
+
 			var madar_animation = new DoubleAnimation
 			{
-				To = 334,
-				Duration = TimeSpan.FromSeconds(3),
+				To = 175,
+				Duration = TimeSpan.FromSeconds(1),
 				EasingFunction = new QuadraticEase
 				{
 					EasingMode = EasingMode.EaseIn
@@ -81,10 +82,14 @@ namespace flappy_birdie
 		{
 			double currentTop = Canvas.GetTop(madar);
 
+			double current_acc = 175 - currentTop;
+
+			double valtozo =current_acc/130;
+
 			var madar_animation = new DoubleAnimation
 			{
-				To = 334,
-				Duration = TimeSpan.FromSeconds(3),
+				To = 175,
+				Duration = TimeSpan.FromSeconds(valtozo),
 				EasingFunction = new QuadraticEase
 				{
 					EasingMode = EasingMode.EaseIn
@@ -93,7 +98,7 @@ namespace flappy_birdie
 
 			madar.BeginAnimation(Canvas.TopProperty, null);
 
-			Canvas.SetTop(madar, currentTop - 15);
+			Canvas.SetTop(madar, currentTop - 12);
 
 			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
 		}
@@ -104,8 +109,8 @@ namespace flappy_birdie
 
 			var madar_animation = new DoubleAnimation
 			{
-				To = 334,
-				Duration = TimeSpan.FromSeconds(3),
+				To = 175,
+				Duration = TimeSpan.FromSeconds(1),
 				EasingFunction = new QuadraticEase
 				{
 					EasingMode = EasingMode.EaseIn
@@ -114,7 +119,7 @@ namespace flappy_birdie
 
 			madar.BeginAnimation(Canvas.TopProperty, null);
 
-			Canvas.SetTop(madar, currentTop - 15);
+			Canvas.SetTop(madar, currentTop - 12);
 
 			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
 		}
