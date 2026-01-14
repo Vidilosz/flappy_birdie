@@ -20,7 +20,8 @@ namespace flappy_birdie
     {
 		
 
-        public MainWindow()
+
+		public MainWindow()
         {
             InitializeComponent();
             Normal.Visibility = Visibility.Collapsed;
@@ -65,8 +66,8 @@ namespace flappy_birdie
 		{
 			var madar_animation = new DoubleAnimation
 			{
-				To = 434,
-				Duration = TimeSpan.FromSeconds(1),
+				To = 334,
+				Duration = TimeSpan.FromSeconds(3),
 				EasingFunction = new QuadraticEase
 				{
 					EasingMode = EasingMode.EaseIn
@@ -74,7 +75,48 @@ namespace flappy_birdie
 			};
 
 			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
+		}
 
+		private void jump_2_Click(object sender, RoutedEventArgs e)
+		{
+			var madar_animation = new DoubleAnimation
+			{
+				To = 334,
+				Duration = TimeSpan.FromSeconds(3),
+				EasingFunction = new QuadraticEase
+				{
+					EasingMode = EasingMode.EaseIn
+				}
+			};
+
+			madar.BeginAnimation(Canvas.TopProperty, null);
+
+			double currentTop = Canvas.GetTop(madar);
+
+			Canvas.SetTop(madar, currentTop - 15);
+
+			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
+		}
+
+		private void jump_1_Click_1(object sender, RoutedEventArgs e)
+		{
+			var madar_animation = new DoubleAnimation
+			{
+				To = 334,
+				Duration = TimeSpan.FromSeconds(3),
+				EasingFunction = new QuadraticEase
+				{
+					EasingMode = EasingMode.EaseIn
+				}
+			};
+
+			madar.BeginAnimation(Canvas.TopProperty, null);
+
+			double currentTop = Canvas.GetTop(madar);
+
+			Canvas.SetTop(madar, currentTop - 15);
+
+			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
 		}
 	}
 }
