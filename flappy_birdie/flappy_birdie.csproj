@@ -9,12 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\floppy2.jpg" />
     <None Remove="Images\pc.jpg" />
     <None Remove="Images\pc2.jpg" />
     <None Remove="Images\pc3.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\floppy2.jpg" />
     <Resource Include="Images\pc.jpg" />
     <Resource Include="Images\pc2.jpg" />
     <Resource Include="Images\pc3.jpg" />
