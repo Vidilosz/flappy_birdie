@@ -64,76 +64,85 @@ namespace flappy_birdie
 
 		public void StartGame()
 		{
-			double speed = 100;
+			double m_speed = 100;
+			double o_speed = 50;
 
 			foreach (var i in Obstacles)
 			{
 				double startLeft = Canvas.GetLeft(i);
-				double distance = startLeft - 0;
+				double o_distance = startLeft - 0;
 
 				var o_animation = new DoubleAnimation
 				{
 					To = 0,
-					Duration = TimeSpan.FromSeconds(distance / speed),
+					Duration = TimeSpan.FromSeconds(o_distance / o_speed),
 					FillBehavior = FillBehavior.HoldEnd
 				};
 
 				i.BeginAnimation(Canvas.LeftProperty, o_animation);
 			}
 
-			var madar_animation = new DoubleAnimation
+
+			double currentTop = Canvas.GetTop(madar);
+			double targetTop = 175;
+			double distance = targetTop - currentTop;
+
+			if (distance <= 0)
+				return;
+
+			var anim = new DoubleAnimation
 			{
-				To = 175,
-				Duration = TimeSpan.FromSeconds(1),
-				EasingFunction = new QuadraticEase
-				{
-					EasingMode = EasingMode.EaseIn
-				}
+				From = currentTop,
+				To = targetTop,
+				Duration = TimeSpan.FromSeconds(distance / m_speed),
+				FillBehavior = FillBehavior.HoldEnd
 			};
 
-			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
+			madar.BeginAnimation(Canvas.TopProperty, anim);
 		}
 
 		private void jump_2_Click(object sender, RoutedEventArgs e)
 		{
-			double currentTop = Canvas.GetTop(madar);
-
-			var madar_animation = new DoubleAnimation
-			{
-				To = 175,
-				Duration = TimeSpan.FromSeconds(1),
-				EasingFunction = new QuadraticEase
-				{
-					EasingMode = EasingMode.EaseIn
-				}
-			};
-
 			madar.BeginAnimation(Canvas.TopProperty, null);
 
+			double currentTop = Canvas.GetTop(madar);
 			Canvas.SetTop(madar, currentTop - 12);
 
-			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
+			StartFall();
 		}
 
 		private void jump_1_Click_1(object sender, RoutedEventArgs e)
 		{
-			double currentTop = Canvas.GetTop(madar);
+			madar.BeginAnimation(Canvas.TopProperty, null);
 
-			var madar_animation = new DoubleAnimation
-			{
-				To = 175,
-				Duration = TimeSpan.FromSeconds(1),
-				EasingFunction = new QuadraticEase
-				{
-					EasingMode = EasingMode.EaseIn
-				}
-			};
+			double currentTop = Canvas.GetTop(madar);
+			Canvas.SetTop(madar, currentTop - 12);
+
+			StartFall();
+		}
+
+		void StartFall()
+		{
+			double m_speed = 50;
 
 			madar.BeginAnimation(Canvas.TopProperty, null);
 
-			Canvas.SetTop(madar, currentTop - 12);
+			double currentTop = Canvas.GetTop(madar);
+			double targetTop = 175;
+			double distance = targetTop - currentTop;
 
-			madar.BeginAnimation(Canvas.TopProperty, madar_animation);
+			if (distance <= 0)
+				return;
+
+			var anim = new DoubleAnimation
+			{
+				From = currentTop,
+				To = targetTop,
+				Duration = TimeSpan.FromSeconds(distance / m_speed),
+				FillBehavior = FillBehavior.HoldEnd
+			};
+
+			madar.BeginAnimation(Canvas.TopProperty, anim);
 		}
 	}
 }
