@@ -82,14 +82,10 @@ namespace flappy_birdie
 		{
 			double currentTop = Canvas.GetTop(madar);
 
-			double current_acc = 175 - currentTop;
-
-			double valtozo =current_acc/130;
-
 			var madar_animation = new DoubleAnimation
 			{
 				To = 175,
-				Duration = TimeSpan.FromSeconds(valtozo),
+				Duration = TimeSpan.FromSeconds(1),
 				EasingFunction = new QuadraticEase
 				{
 					EasingMode = EasingMode.EaseIn

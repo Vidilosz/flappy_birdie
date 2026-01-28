@@ -15,9 +15,9 @@
 		<Image Source="/Images/floppy2.jpg" x:Name="madar" Canvas.Left="188" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Top" Width="23" Height="24"/>
 
 		<Button x:Name="Start" Content="Start" Canvas.Left="318" Canvas.Top="53" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Start_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
-		<Button x:Name="Normal" Content="Normal" Canvas.Left="325" Canvas.Top="13" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Normal_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
+		<Button x:Name="Normal" Content="Normal" Canvas.Left="324" Canvas.Top="19" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Normal_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
 		<Button x:Name="Rainy_day" Content="Rainy day" Canvas.Left="325" Canvas.Top="89" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Background="{x:Null}" Click="Rainy_day_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
-		<Button x:Name="TFI" Content="ThE foG IS COmIng" Canvas.Left="323" Canvas.Top="152" Height="65" Width="164" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="19" Background="{x:Null}" Click="TFI_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
+		<Button x:Name="TFI" Content="ThE foG IS COmIng" Canvas.Left="323" Canvas.Top="148" Height="65" Width="164" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="19" Background="{x:Null}" Click="TFI_Click" BorderBrush="{x:Null}" Foreground="#FF6FA500"/>
 
 		<Rectangle Height="217" Canvas.Left="40" Stroke="Black" Canvas.Top="220" Width="724" Fill="#FFF9EECB" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 		<Ellipse Height="50" Canvas.Left="485" Stroke="Red" Canvas.Top="330" Width="50" Fill="Red"/>
@@ -52,6 +52,45 @@
 		<Ellipse Height="34" Canvas.Left="223" Stroke="Black" Canvas.Top="321" Width="34" Fill="#FF5F5353" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 		<Button x:Name="jump_2" Content="B" Canvas.Left="551" Canvas.Top="275" Background="{x:Null}" BorderBrush="{x:Null}" Height="64" Width="73" FontWeight="Bold" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="jump_2_Click"/>
 		<Button x:Name="jump_1" Content="A" Canvas.Left="474" Canvas.Top="321" Background="{x:Null}" BorderBrush="{x:Null}" Height="64" Width="73" FontWeight="Bold" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="jump_1_Click_1"/>
+
+
+		<Rectangle x:Name="Obstacle_1" Height="60" Canvas.Left="620" Stroke="#FF6FA500" Canvas.Top="147" Width="22" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black" Offset="0.135"/>
+					<GradientStop Color="#FF219809" Offset="0.574"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
+		</Rectangle>
+		<Rectangle Height="52" Canvas.Left="620" Stroke="#FF6FA500" Canvas.Top="41" Width="22" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black" Offset="0.135"/>
+					<GradientStop Color="#FF219809" Offset="0.574"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1"/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.971"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
+		</Rectangle>
+
+		<Rectangle x:Name="bottom_border" Height="2" Canvas.Left="154" Canvas.Top="209" Width="507" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+		<Rectangle x:Name="top_border" Height="2" Canvas.Left="145" Canvas.Top="35" Width="526" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+		<Rectangle x:Name="left_border" Height="170" Canvas.Left="160" Canvas.Top="41" Width="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<Rectangle x:Name="right_border" Height="178" Canvas.Left="647" Canvas.Top="34" Width="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
 	</Canvas>
 </Window>
