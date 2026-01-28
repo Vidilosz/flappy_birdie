@@ -18,12 +18,12 @@ namespace flappy_birdie
     /// </summary>
     public partial class MainWindow : Window
     {
-		
-
+		private List<Rectangle> Obstacles;
 
 		public MainWindow()
         {
             InitializeComponent();
+			Obstacles= new List<Rectangle> { Obstacle_1, Obstacle_2, Obstacle_3, Obstacle_4, Obstacle_5, Obstacle_6, Obstacle_7, Obstacle_8, Obstacle_9, Obstacle_10, Obstacle_11, Obstacle_12, Obstacle_13, Obstacle_14 };
             Normal.Visibility = Visibility.Collapsed;
             Rainy_day.Visibility = Visibility.Collapsed;
             TFI.Visibility = Visibility.Collapsed;
@@ -64,6 +64,22 @@ namespace flappy_birdie
 
 		public void StartGame()
 		{
+			double speed = 100;
+
+			foreach (var i in Obstacles)
+			{
+				double startLeft = Canvas.GetLeft(i);
+				double distance = startLeft - 0;
+
+				var o_animation = new DoubleAnimation
+				{
+					To = 0,
+					Duration = TimeSpan.FromSeconds(distance / speed),
+					FillBehavior = FillBehavior.HoldEnd
+				};
+
+				i.BeginAnimation(Canvas.LeftProperty, o_animation);
+			}
 
 			var madar_animation = new DoubleAnimation
 			{
