@@ -10,16 +10,28 @@
 
   <ItemGroup>
     <None Remove="Images\floppy2.jpg" />
+    <None Remove="Images\fog_is _here.jpg" />
+    <None Remove="Images\kod.png" />
+    <None Remove="Images\kod2.png" />
     <None Remove="Images\pc.jpg" />
     <None Remove="Images\pc2.jpg" />
     <None Remove="Images\pc3.jpg" />
+    <None Remove="Images\rain_gif.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\floppy2.jpg" />
+    <Resource Include="Images\fog_is _here.jpg" />
+    <Resource Include="Images\kod.png" />
+    <Resource Include="Images\kod2.png" />
     <Resource Include="Images\pc.jpg" />
     <Resource Include="Images\pc2.jpg" />
     <Resource Include="Images\pc3.jpg" />
+    <Resource Include="Images\rain_gif.gif" />
   </ItemGroup>
 
 </Project>
